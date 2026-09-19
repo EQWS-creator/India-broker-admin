@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="India Broker Admin Dashboard starter">
+  <title>India Broker — Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-mark">₹</span><span>India<span>Broker</span></span></div>
+      <p class="admin-label">ADMIN CONSOLE</p>
+      <nav>
+        <a class="active" href="#overview">Overview</a>
+        <a href="#users">Users</a>
+        <a href="#accounts">Accounts</a>
+        <a href="#orders">Orders</a>
+        <a href="#transactions">Transactions</a>
+        <a href="#support">Support</a>
+        <a href="#settings">Settings</a>
+      </nav>
+      <div class="sidebar-footer">
+        <span class="demo-badge">DEMO ADMIN</span>
+        <small>Backend/authentication not connected</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+        <div>
+          <p class="eyebrow">ADMINISTRATION</p>
+          <h1>Dashboard</h1>
+        </div>
+        <div class="admin-user">
+          <span class="avatar">AD</span>
+          <div><strong>Administrator</strong><small>Demo session</small></div>
+        </div>
+      </header>
+
+      <section id="overview" class="content">
+        <div class="notice">
+          <strong>Starter dashboard:</strong> this is an interface only. Connect secure authentication, a backend/database, broker APIs and role-based permissions before using it with real customer or trading data.
+        </div>
+
+        <div class="stats">
+          <article class="stat"><span>Total users</span><strong>1,284</strong><small>Demo data</small></article>
+          <article class="stat"><span>Active accounts</span><strong>936</strong><small>Demo data</small></article>
+          <article class="stat"><span>Pending reviews</span><strong>27</strong><small>Demo data</small></article>
+          <article class="stat"><span>Today's orders</span><strong>418</strong><small>Demo data</small></article>
+        </div>
+
+        <div class="grid">
+          <section class="card wide">
+            <div class="card-head"><div><p class="eyebrow">CUSTOMER ACTIVITY</p><h2>Recent users</h2></div><button class="ghost">View all</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>User</th><th>Account</th><th>Status</th><th>Joined</th></tr></thead>
+                <tbody id="userTable"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="card-head"><div><p class="eyebrow">SYSTEM</p><h2>Service status</h2></div></div>
+            <div class="status-list">
+              <div><span>Admin interface</span><b class="online">Ready</b></div>
+              <div><span>Authentication</span><b class="offline">Not connected</b></div>
+              <div><span>Database</span><b class="offline">Not connected</b></div>
+              <div><span>Broker API</span><b class="offline">Not connected</b></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="grid">
+          <section class="card" id="accounts">
+            <div class="card-head"><div><p class="eyebrow">ACCOUNT REVIEW</p><h2>Pending reviews</h2></div></div>
+            <div id="reviewList" class="review-list"></div>
+          </section>
+
+          <section class="card" id="orders">
+            <div class="card-head"><div><p class="eyebrow">ORDER MONITOR</p><h2>Recent demo orders</h2></div></div>
+            <div id="orderList" class="order-list"></div>
+          </section>
+        </div>
+
+        <section class="card" id="users">
+          <div class="card-head"><div><p class="eyebrow">USER MANAGEMENT</p><h2>Admin controls</h2></div></div>
+          <div class="control-grid">
+            <button class="control"><b>Manage users</b><span>Profiles, status and roles</span></button>
+            <button class="control"><b>Review accounts</b><span>KYC workflow placeholder</span></button>
+            <button class="control"><b>Monitor orders</b><span>Demo order activity</span></button>
+            <button class="control"><b>Support queue</b><span>Customer conversations</span></button>
+          </div>
+        </section>
+
+        <section class="card" id="transactions">
+          <div class="card-head"><div><p class="eyebrow">TRANSACTIONS</p><h2>Transaction center</h2></div></div>
+          <p class="muted">Reserved for verified backend transaction data. Do not use static dashboard values as evidence of real funds, balances or completed trades.</p>
+        </section>
+
+        <section class="card" id="support">
+          <div class="card-head"><div><p class="eyebrow">SUPPORT</p><h2>Customer support</h2></div></div>
+          <p class="muted">Connect this area to a secure support/ticket service when the customer-facing chat is connected.</p>
+        </section>
+
+        <section class="card" id="settings">
+          <div class="card-head"><div><p class="eyebrow">SETTINGS</p><h2>Platform configuration</h2></div></div>
+          <div class="settings-row"><span>Environment</span><b>Demo</b></div>
+          <div class="settings-row"><span>Live trading</span><b class="offline">Not connected</b></div>
+          <div class="settings-row"><span>Admin authentication</span><b class="offline">Pending integration</b></div>
+        </section>
+      </section>
+
+      <footer>India Broker Admin • Starter interface • Not a live brokerage control system</footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
